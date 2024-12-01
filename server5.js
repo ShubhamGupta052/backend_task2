@@ -9,7 +9,6 @@ const PORT = 4000;   //Gives the port number
 
 const dbURI = 'mongodb://localhost:27017/Comix-stor'; //TAkes us to the database
 
-
 mongoose.connect(dbURI)
   .then(() => 
     console.log('MongoDB connected successfully'))
@@ -18,7 +17,7 @@ mongoose.connect(dbURI)
 
 app.use(express.json());  // tells the program that the file is in json format
 
-app.use("/api/user", require("./userAuth"));
+app.use("/api/user", require('./userAuth'));
 
 app.use('/api/manga',comicwave);
 

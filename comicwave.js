@@ -1,6 +1,10 @@
 const express = require('express');
 const Comic = require('./comicwan');
+const validateToken= require("./validateToken");
 const router = express.Router();
+
+
+router.use(validateToken);
 
 router.post('/', async (req, res, next) => {
   try {
